@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Whack-a-Mole</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+  </head>
+  <body>
+    <style>
+      .swal2-confirm {
+        background-color: rgb(122, 11, 66) !important;
+        color: rgb(247, 199, 184) !important; /* set the button color */
+      }
+      .swal2-popup {
+        background-color: rgb(247, 199, 184);
+        color: rgb(161, 76, 34) !important; /* set the background color of the modal dialog */
+      }
+      .swal2-confirm:focus {
+        box-shadow: none; /* remove the focus ring from the confirm button */
+      }
+    </style>
+
+    <div class="container">
+      <h1>Whack-a-Mole !</h1>
+      <div class="scoreboard">
+        <p>Score: <span id="score">0</span></p>
+        <p>Time left: <span id="time">30</span></p>
+      </div>
+      <div class="gameboard">
+        <div class="hole hole-1"></div>
+        <div class="hole hole-2"></div>
+        <div class="hole hole-3"></div>
+        <div class="hole hole-4"></div>
+        <div class="hole hole-5"></div>
+        <div class="hole hole-6"></div>
+        <div class="hole hole-7"></div>
+        <div class="hole hole-8"></div>
+        <div class="hole hole-9"></div>
+        <div class="hole hole-10"></div>
+        <div class="hole hole-11"></div>
+        <div class="hole hole-12"></div>
+        <div class="hole hole-13"></div>
+        <div class="hole hole-14"></div>
+        <div class="hole hole-15"></div>
+      </div>
+      <button id="start-btn">Start</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
