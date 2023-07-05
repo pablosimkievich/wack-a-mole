@@ -33,8 +33,8 @@ function endGame() {
   gameStarted = false;
   startBtn.disabled = false;
   Swal.fire({
-    title: "Game Over !",
-    text: `Your score is  ${score}`,
+    title: "¡ El juego ha terminado !",
+    text: `Has obtenido ${score} puntos`,
     backdrop: 'static',
     allowOutsideClick: false,
     allowEscapeKey: true,
