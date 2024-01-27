@@ -1,4 +1,4 @@
-// Game variables
+// Variables
 const gameboard = document.querySelector(".gameboard");
 const holes = document.querySelectorAll(".hole");
 const scoreDisplay = document.querySelector("#score");
@@ -9,7 +9,7 @@ let timeLeft = 30;
 let gameStarted = false;
 let gameInterval;
 
-// Start the game
+// Empieza Juego
 function startGame() {
   gameStarted = true;
   startBtn.disabled = true;
@@ -27,7 +27,7 @@ function startGame() {
   startMoles();
 }
 
-// End the game
+// Termina Juego
 function endGame() {
   clearInterval(gameInterval);
   gameStarted = false;
@@ -40,22 +40,22 @@ function endGame() {
     allowEscapeKey: true,
     confirmButtonText: "OK",
     customClass: {
-      container: 'swal-no-select',  // Add a custom class to the container element
+      container: 'swal-no-select',  // custom class al contenedor elemento
     },
   });
 }
 
-// Start the moles
+// Topos
 function startMoles() {
   let moleInterval = setInterval(() => {
-    // Pick a random hole
+    // random hole
     const randomIndex = Math.floor(Math.random() * holes.length);
     const hole = holes[randomIndex];
-    // Check if there's already a mole in the hole
+    // mole in the hole ?
     if (!hole.classList.contains("has-mole")) {
-      // Add a mole to the hole
+      // agrega la clase has-mole
       hole.classList.add("has-mole");
-      // Remove the mole after a random time interval
+      // después de un random time interval, desaparece el topo
       setTimeout(() => {
         hole.classList.remove("has-mole");
       }, Math.random() * 2000 + 1000);
@@ -63,7 +63,7 @@ function startMoles() {
   }, 1000);
 }
 
-// Whack a mole
+// Whack a mole !
 function whackMole(e) {
   if (!gameStarted) return;
   const hole = e.target.closest(".hole");

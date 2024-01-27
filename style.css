@@ -53,7 +53,7 @@ h1 {
 }
 
 .hole:active .mole {
-  transform: translateY(50px);
+ /*  transform: translateY(50px); */
 }
 
 .mole {
