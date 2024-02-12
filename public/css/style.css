@@ -86,7 +86,7 @@ h1 {
 
 .hole.has-mole {
   
-  background: url(./mole.png);
+  background: url(../../public/img/mole.png);
   background-size: 160px;
   background-repeat: no-repeat;
   background-position: 0% -5%;
